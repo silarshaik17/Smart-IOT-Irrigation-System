@@ -54,13 +54,28 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 - DB-9 cable / USB-UART converter
 - SPDT relay, 12V supply, water pump (or LED for demo)
 
+ 
+## Hardware Connections
+
+| Component                           | LPC2148 Pin   |
+| ----------------------------------- | ------------- |
+| LCD Data Pins (D0–D7)               | P0.8 – P0.15  |
+| 4×4 Keypad                          | P1.16 – P1.23 |
+| Soil Moisture Sensor                | P0.21         |
+| Water Pump/Motor (via Relay Driver) | P0.20         |
+| DHT11 Temperature & Humidity Sensor | P0.23         |
+| Interrupt Switch                    | P0.3 (EINT1)  |
+| UART TX                             | P0.1 (TXD0)   |
+| UART RX                             | P0.0 (RXD0)   |
+
+
 ## 💻 Software Requirements
 
 - Keil µVision (C Compiler)
 - Flash Magic (firmware flashing)
 - Embedded C
 - ThingSpeak account (free tier)
-
+  
 ## 🚀 Getting Started
 
 ```bash
@@ -88,11 +103,3 @@ media/demo.gif
 - Add a mobile app / dashboard for manual override
 - Multi-zone irrigation with per-zone moisture thresholds
 - Solar-powered standalone field deployment
-
-## 📄 License
-
-MIT License — free to use and modify for learning and non-commercial projects.
-
----
-
-*Built as part of an embedded systems / IoT coursework project.*
