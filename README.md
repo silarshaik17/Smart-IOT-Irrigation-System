@@ -31,7 +31,7 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 
 ## 🧩 Block Diagram
 
-![Block Diagram](block_diagram_of_project.jpeg)
+![Block Diagram](modern_img.png)
 
 | Component | Role |
 |---|---|
