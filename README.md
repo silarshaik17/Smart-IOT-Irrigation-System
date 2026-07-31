@@ -29,7 +29,7 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 
 > 💡 A LED is used in place of the actual water pump/motor for safe demonstration — swap in a relay + 12V pump for a real deployment.
 
-## 🧩 BLOCK DIAGRAM
+## 🧩 Block Diagram
 
 ![Block Diagram](block_diagram_of_project.jpeg)
 
