@@ -75,18 +75,26 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 - Flash Magic (firmware flashing)
 - Embedded C
 - ThingSpeak account (free tier)
-  
-## 🚀 Getting Started
 
-```bash
-git clone https://github.com/<your-username>/smart-iot-irrigation-system.git
-```
 
-1. Open the project in **Keil µVision**.
-2. Wire up hardware per `docs/circuit_diagram.png`.
-3. Set your ThingSpeak **Write API Key** in `esp01.h`.
-4. Build and flash to the LPC2148 using **Flash Magic**.
-5. Watch live data at `https://thingspeak.com/channels/<your-channel-id>`.
+## Working Process
+
+- Power ON the system. The LPC2148 initializes all peripherals.
+-  The LCD turns ON and displays the project name or initialization message.
+- The ESP01 Wi-Fi module is initialized by sending AT commands (AT, ATE0, AT+CWMODE, AT+CWJAP, etc.).
+   After the ESP01 successfully connects to the Wi-Fi network, the system starts normal operation.
+- The RTC reads the current date and time and displays it on the LCD.
+- The DHT11 sensor measures the temperature and humidity.
+- The soil moisture sensor measures the moisture level of the soil.
+- The LPC2148 displays the sensor values and time on the LCD.
+- If the soil moisture value is below the preset threshold, the LPC2148 turns ON the relay, which starts the 12 V       water    motor.
+-  When the soil moisture reaches the required level, the relay turns OFF the water motor automatically.
+-  The sensor data (temperature, humidity, soil moisture, and motor status) is sent to the ThingSpeak Cloud through the     ESP01 using UART communication.
+-  The uploaded data can be monitored from a mobile phone, laptop, or PC using the ThingSpeak dashboard.
+
+This sequence matches the actual execution flow of your code:
+Power ON → LCD Initialization → ESP01 AT Commands → Wi-Fi Connection → RTC → Sensor Reading → LCD Display → Motor Control → ThingSpeak Data Upload.
+
 
 ## 📊 Results
 
