@@ -13,21 +13,6 @@ Automated, sensor-driven irrigation built on the **LPC2148 (ARM7)** microcontrol
 
 Manual irrigation wastes water and guesses at soil conditions instead of measuring them. This project closes the loop: soil moisture and ambient temperature/humidity are sensed continuously, the microcontroller decides when — and for how long — to run the pump, and every action is logged to **ThingSpeak** so the system can be monitored remotely from a laptop or phone.
 
-## ⚙️ How It Works
-
-1. **DHT11** reads temperature and relative humidity; values are displayed on a 16x2 LCD in real time.
-2. **Soil moisture sensor** continuously checks soil condition (digital or analog output).
-3. **Decision logic** on the LPC2148:
-   - Soil moisture is the **primary** trigger — if it's low, the pump turns on.
-   - Temperature acts as a **modifier**:
-     - Dry soil + high temperature → pump runs **3 minutes**
-     - Dry soil + normal/low temperature → pump runs **1 minute**
-   - Soil moist → pump stays off.
-4. **RTC** timestamps sensor readings and gates how frequently data is pushed to the cloud.
-5. **ESP01 Wi-Fi module** (driven over UART) pushes temperature, humidity, and pump ON/OFF events to **ThingSpeak**, viewable live from any laptop/PC/mobile.
-6. A **4x4 matrix keypad + interrupt switch** let the user manually edit RTC time via a menu-driven interface.
-
-> 💡 A LED is used in place of the actual water pump/motor for safe demonstration — swap in a relay + 12V pump for a real deployment.
 
 ## 🧩 Block Diagram
 
@@ -68,6 +53,8 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 | UART TX                             | P0.1 (TXD0)   |
 | UART RX                             | P0.0 (RXD0)   |
 
+## Overview
+
 
 ## 💻 Software Requirements
 
@@ -94,6 +81,23 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 
 This sequence matches the actual execution flow of your code:
 Power ON → LCD Initialization → ESP01 AT Commands → Wi-Fi Connection → RTC → Sensor Reading → LCD Display → Motor Control → ThingSpeak Data Upload.
+
+## ⚙️ How It Works
+
+1. **DHT11** reads temperature and relative humidity; values are displayed on a 16x2 LCD in real time.
+2. **Soil moisture sensor** continuously checks soil condition (digital or analog output).
+3. **Decision logic** on the LPC2148:
+   - Soil moisture is the **primary** trigger — if it's low, the pump turns on.
+   - Temperature acts as a **modifier**:
+     - Dry soil + high temperature → pump runs **3 minutes**
+     - Dry soil + normal/low temperature → pump runs **1 minute**
+   - Soil moist → pump stays off.
+4. **RTC** timestamps sensor readings and gates how frequently data is pushed to the cloud.
+5. **ESP01 Wi-Fi module** (driven over UART) pushes temperature, humidity, and pump ON/OFF events to **ThingSpeak**, viewable live from any laptop/PC/mobile.
+6. A **4x4 matrix keypad + interrupt switch** let the user manually edit RTC time via a menu-driven interface.
+
+> 💡 A LED is used in place of the actual water pump/motor for safe demonstration — swap in a relay + 12V pump for a real deployment.
+
 
 
 ## 📊 Results
