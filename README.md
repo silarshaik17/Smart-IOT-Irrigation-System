@@ -54,7 +54,7 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 | UART RX                             | P0.0 (RXD0)   |
 
 ## Overview of Hardware
-<img src="images/overview.jpeg" width="50%">
+<img src="images/overview.jpeg" width="75%">
 ## 💻 Software Requirements
 
 - Keil µVision (C Compiler)
