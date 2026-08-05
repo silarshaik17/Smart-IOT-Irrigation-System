@@ -16,7 +16,7 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 
 ## 🧩 Block Diagram
 
-![Block Diagram](modern_img.png)
+![Block Diagram](images/modern_img.png)
 
 | Component | Role |
 |---|---|
@@ -54,7 +54,7 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 | UART RX                             | P0.0 (RXD0)   |
 
 ## Overview of Hardware
-![block](overview.jpeg))
+![block](image/overview.jpeg)
 
 ## 💻 Software Requirements
 
