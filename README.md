@@ -62,12 +62,11 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 - Embedded C
 - ThingSpeak account (free tier)
 
-
-## Working Process
+## ⚙️ How It Works
 
 - Power ON the system. The LPC2148 initializes all peripherals.
 -  The LCD turns ON and displays the project name or initialization message.
-- The ESP01 Wi-Fi module is initialized by sending AT commands (AT, ATE0, AT+CWMODE, AT+CWJAP, etc.).
+-  The ESP01 Wi-Fi module is initialized by sending AT commands (AT, ATE0, AT+CWMODE, AT+CWJAP, etc.).
    After the ESP01 successfully connects to the Wi-Fi network, the system starts normal operation.
 - The RTC reads the current date and time and displays it on the LCD.
 - The DHT11 sensor measures the temperature and humidity.
@@ -80,33 +79,6 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 
 This sequence matches the actual execution flow of your code:
 Power ON → LCD Initialization → ESP01 AT Commands → Wi-Fi Connection → RTC → Sensor Reading → LCD Display → Motor Control → ThingSpeak Data Upload.
-
-## ⚙️ How It Works
-
-1. **DHT11** reads temperature and relative humidity; values are displayed on a 16x2 LCD in real time.
-2. **Soil moisture sensor** continuously checks soil condition (digital or analog output).
-3. **Decision logic** on the LPC2148:
-   - Soil moisture is the **primary** trigger — if it's low, the pump turns on.
-   - Temperature acts as a **modifier**:
-     - Dry soil + high temperature → pump runs **3 minutes**
-     - Dry soil + normal/low temperature → pump runs **1 minute**
-   - Soil moist → pump stays off.
-4. **RTC** timestamps sensor readings and gates how frequently data is pushed to the cloud.
-5. **ESP01 Wi-Fi module** (driven over UART) pushes temperature, humidity, and pump ON/OFF events to **ThingSpeak**, viewable live from any laptop/PC/mobile.
-6. A **4x4 matrix keypad + interrupt switch** let the user manually edit RTC time via a menu-driven interface.
-
-> 💡 A LED is used in place of the actual water pump/motor for safe demonstration — swap in a relay + 12V pump for a real deployment.
-
-
-
-## 📊 Results
-
-*(Add a screenshot of your ThingSpeak dashboard here, and a short demo GIF/video of the LCD + pump reacting to soil moisture changes.)*
-
-```
-docs/thingspeak_dashboard.png
-media/demo.gif
-```
 
 ## 🔭 Future Scope
 
