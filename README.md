@@ -66,8 +66,19 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 
 - Power ON the system. The LPC2148 initializes all peripherals.
 -  The LCD turns ON and displays the project name or initialization message.
--  The ESP01 Wi-Fi module is initialized by sending AT commands (AT, ATE0, AT+CWMODE, AT+CWJAP, etc.).
-   After the ESP01 successfully connects to the Wi-Fi network, the system starts normal operation.
+ <img src="images/img7.jpeg" width="50%">
+-  The ESP01 Wi-Fi module is initialized by sending AT commands (AT, ATE0, AT+CWMODE, AT+CWJAP, etc.)
+ <img src="images/img7.jpeg" width="50%">
+  <img src="images/img7.jpeg" width="50%">
+ <img src="images/img7.jpeg" width="50%">
+  <img src="images/img7.jpeg" width="50%">
+   <img src="images/img7.jpeg" width="50%">
+    <img src="images/img7.jpeg" width="50%">
+     <img src="images/img7.jpeg" width="50%">
+      <img src="images/img7.jpeg" width="50%">
+       <img src="images/img7.jpeg" width="50%">
+        <img src="images/img7.jpeg" width="50%">
+After the ESP01 successfully connects to the Wi-Fi network, the system starts normal operation.
 - The RTC reads the current date and time and displays it on the LCD.
 - The DHT11 sensor measures the temperature and humidity.
 - The soil moisture sensor measures the moisture level of the soil.
