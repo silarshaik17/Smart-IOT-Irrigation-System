@@ -66,18 +66,18 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 
 - Power ON the system. The LPC2148 initializes all peripherals.
 -  The LCD turns ON and displays the project name or initialization message.
- <img src="images/img7.jpeg" width="50%">
+ <img src="images/img7.png" width="90%">
 -  The ESP01 Wi-Fi module is initialized by sending AT commands (AT, ATE0, AT+CWMODE, AT+CWJAP, etc.)
- <img src="images/img7.png" width="50%">
-  <img src="images/img7.png" width="50%">
- <img src="images/img7.png" width="50%">
-  <img src="images/img7.jpeg" width="50%">
-   <img src="images/img7.jpeg" width="50%">
-    <img src="images/img7.jpeg" width="50%">
-     <img src="images/img7.jpeg" width="50%">
-      <img src="images/img7.jpeg" width="50%">
-       <img src="images/img7.jpeg" width="50%">
-        <img src="images/img7.jpeg" width="50%">
+ <img src="images/img1.png" width="90%">
+  <img src="images/img6.png" width="90%">
+ <img src="images/img2.png" width="90%">
+  <img src="images/img6.jpeg" width="90%">
+   <img src="images/img3.jpeg" width="90%">
+    <img src="images/img6.jpeg" width="90%">
+     <img src="images/img4.jpeg" width="90%">
+      <img src="images/img6.jpeg" width="90%">
+       <img src="images/img5.jpeg" width="90%">
+        <img src="images/img6.jpeg" width="90%">
 After the ESP01 successfully connects to the Wi-Fi network, the system starts normal operation.
 - The RTC reads the current date and time and displays it on the LCD.
 - The DHT11 sensor measures the temperature and humidity.
