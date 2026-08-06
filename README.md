@@ -68,9 +68,9 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 -  The LCD turns ON and displays the project name or initialization message.
  <img src="images/img7.jpeg" width="50%">
 -  The ESP01 Wi-Fi module is initialized by sending AT commands (AT, ATE0, AT+CWMODE, AT+CWJAP, etc.)
- <img src="images/img7.jpeg" width="50%">
-  <img src="images/img7.jpeg" width="50%">
- <img src="images/img7.jpeg" width="50%">
+ <img src="images/img7.png" width="50%">
+  <img src="images/img7.png" width="50%">
+ <img src="images/img7.png" width="50%">
   <img src="images/img7.jpeg" width="50%">
    <img src="images/img7.jpeg" width="50%">
     <img src="images/img7.jpeg" width="50%">
