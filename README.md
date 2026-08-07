@@ -66,7 +66,7 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 
 1. Power ON the system. The LPC2148 initializes all peripherals.
 2. The LCD turns ON and displays the project name or initialization message.
- <img src="images/IMG_20260806_153258295_HDR.JPg" width="70%">
+ <img src="images/IMG_20260806_153258295_HDR.jpg" width="70%">
 3.  The ESP01 Wi-Fi module is initialized by sending AT commands (AT, ATE0, AT+CIPMUX, AT+CWQAP, etc.)
  <img src="images/Gallery_1786013512929.png" width="70%">
   <img src="images/Gallery_1786013578106.png" width="70%">
