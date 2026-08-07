@@ -101,6 +101,15 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 **Execution sequence:**
 Power ON → LCD Initialization → ESP01 AT Commands → Wi-Fi Connection → RTC → Sensor Reading → LCD Display → Motor Control → ThingSpeak Data Upload.
 
+## 📊 Project Statistics
+## Temperature Readings updated to cloud
+## Humidity Readings updated to cloud
+## Motor Readings updated to cloud 
+
+- Sensor Data
+- Temperature
+- Soil Moisture
+
 ## 🔭 Future Scope
 
 - Replace ESP01 with ESP32 for combined sensing + Wi-Fi on one chip
