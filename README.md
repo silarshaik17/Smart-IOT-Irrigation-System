@@ -64,33 +64,41 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 
 ## ⚙️ How It Works
 
-*** Power ON the system. The LPC2148 initializes all peripherals.
-***  The LCD turns ON and displays the project name or initialization message.
- <img src="images/IMG_20260806_153258295_HDR.jpg" width="70%">
-*** The ESP01 Wi-Fi module is initialized by sending AT commands (AT, ATE0, AT+CIPMUX, AT+CWQAP, etc.)
- <img src="images/Gallery_1786013512929.png" width="70%">
-  <img src="images/Gallery_1786013578106.png" width="70%">
- <img src="images/Gallery_1786013603081.png" width="70%">
-  <img src="images/Gallery_1786013578106.png" width="70%">
-   <img src="images/Gallery_1786013853969.png" width="70%">
-    <img src="images/Gallery_1786013578106.png" width="70%">
-     <img src="images/Gallery_1786013701661.png" width="70%">
-      <img src="images/Gallery_1786013869685.png" width="70%">
- *** After the ESP01 successfully connects to the Wi-Fi network, the system starts normal operation.
-***  The RTC reads the current date and time and displays it on the LCD.
-***  The DHT11 sensor measures the temperature and humidity.
-***  The image representing it shows on the LCD
-<img src="images/Gallery_1785997738144.jpg" width="70%">
-*** The soil moisture sensor measures the moisture level of the soil.
-*** The LPC2148 displays the sensor values and time on the LCD.
-*** If the soil moisture value is below the preset threshold, the LPC2148 turns ON the relay, which starts the 12 V           water    motor.
-*** LCD Display
-<img src="images/Gallery_1786075843700.jpg" width="70%">
-***  When the soil moisture reaches the required level, the relay turns OFF the water motor automatically.
-*** the  sensor data (temperature, humidity, soil moisture, and motor status) is sent to the ThingSpeak Cloud through           the  ESP01 using UART communication.
-*** The uploaded data can be monitored from a mobile phone, laptop, or PC using the ThingSpeak dashboard.
+1. Power ON the system. The LPC2148 initializes all peripherals.
+2. The LCD turns ON and displays the project name or initialization message.
 
-This sequence matches the actual execution code:
+   <img src="images/IMG_20260806_153258295_HDR.jpg" width="70%">
+
+3. The ESP01 Wi-Fi module is initialized by sending AT commands (AT, ATE0, AT+CIPMUX, AT+CWQAP, etc.)
+
+   <img src="images/Gallery_1786013512929.png" width="70%">
+   <img src="images/Gallery_1786013578106.png" width="70%">
+   <img src="images/Gallery_1786013603081.png" width="70%">
+   <img src="images/Gallery_1786013578106.png" width="70%">
+   <img src="images/Gallery_1786013853969.png" width="70%">
+   <img src="images/Gallery_1786013578106.png" width="70%">
+   <img src="images/Gallery_1786013701661.png" width="70%">
+   <img src="images/Gallery_1786013869685.png" width="70%">
+
+4. After the ESP01 successfully connects to the Wi-Fi network, the system starts normal operation.
+5. The RTC reads the current date and time and displays it on the LCD.
+6. The DHT11 sensor measures the temperature and humidity.
+7. The image representing it shows on the LCD.
+
+   <img src="images/Gallery_1785997738144.jpg" width="70%">
+
+8. The soil moisture sensor measures the moisture level of the soil.
+9. The LPC2148 displays the sensor values and time on the LCD.
+10. If the soil moisture value is below the preset threshold, the LPC2148 turns ON the relay, which starts the 12 V water motor.
+11. LCD Display
+
+    <img src="images/Gallery_1786075843700.jpg" width="70%">
+
+12. When the soil moisture reaches the required level, the relay turns OFF the water motor automatically.
+13. The sensor data (temperature, humidity, soil moisture, and motor status) is sent to the ThingSpeak Cloud through the ESP01 using UART communication.
+14. The uploaded data can be monitored from a mobile phone, laptop, or PC using the ThingSpeak dashboard.
+
+**Execution sequence:**
 Power ON → LCD Initialization → ESP01 AT Commands → Wi-Fi Connection → RTC → Sensor Reading → LCD Display → Motor Control → ThingSpeak Data Upload.
 
 ## 🔭 Future Scope
