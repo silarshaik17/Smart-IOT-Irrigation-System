@@ -102,14 +102,14 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 Power ON → LCD Initialization → ESP01 AT Commands → Wi-Fi Connection → RTC → Sensor Reading → LCD Display → Motor Control → ThingSpeak Data Upload.
 
 ## 📊 Project Statistics
-# Temperature Readings updated to cloud
+ Temperature Readings updated to cloud
 <img src="images/Gallery_1786085942844.png" width="70%">
 
-# Humidity Readings updated to cloud
+ Humidity Readings updated to cloud
 
 <img src="images/Gallery_1786085906335.png" width="70%">
 
-# Motor Readings updated to  cloud 
+ Motor Readings updated to  cloud 
 <img src="images/Gallery_1786085921844.png" width="70%">
 
 
