@@ -103,14 +103,14 @@ Power ON → LCD Initialization → ESP01 AT Commands → Wi-Fi Connection → R
 
 ## 📊 Project Statistics
 # Temperature Readings updated to cloud
-<img src="images/Gallery_1786085942844.jpg" width="70%">
+<img src="images/Gallery_1786085942844.png" width="70%">
 
 # Humidity Readings updated to cloud
 
-<img src="images/Gallery_1786085906335.jpg" width="70%">
+<img src="images/Gallery_1786085906335.png" width="70%">
 
 # Motor Readings updated to  cloud 
-<img src="images/Gallery_1786085921844.jpg" width="70%">
+<img src="images/Gallery_1786085921844.png" width="70%">
 
 
 - Sensor Data
