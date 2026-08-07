@@ -66,21 +66,21 @@ Manual irrigation wastes water and guesses at soil conditions instead of measuri
 
 1. Power ON the system. The LPC2148 initializes all peripherals.
 2. The LCD turns ON and displays the project name or initialization message.
- <img src="images/IMG_20260806_153258295.png" width="80%">
+ <img src="images/IMG_20260806_153258295.png" width="70%">
 3.  The ESP01 Wi-Fi module is initialized by sending AT commands (AT, ATE0, AT+CIPMUX, AT+CWQAP, etc.)
- <img src="images/Gallery_1786013512929.png" width="90%">
+ <img src="images/Gallery_1786013512929.png" width="70%">
+  <img src="images/Gallery_1786013578106.png" width="70%">
+ <img src="images/Gallery_1786013603081.png" width="70%">
   <img src="images/Gallery_1786013578106.png" width="90%">
- <img src="images/Gallery_1786013603081.png" width="90%">
-  <img src="images/Gallery_1786013578106.png" width="90%">
-   <img src="images/Gallery_1786013853969.png" width="90%">
-    <img src="images/Gallery_1786013578106.png" width="90%">
-     <img src="images/Gallery_1786013701661.png" width="90%">
-      <img src="images/Gallery_1786013869685.png" width="90%">
+   <img src="images/Gallery_1786013853969.png" width="70%">
+    <img src="images/Gallery_1786013578106.png" width="70%">
+     <img src="images/Gallery_1786013701661.png" width="70%">
+      <img src="images/Gallery_1786013869685.png" width="70%">
 4. After the ESP01 successfully connects to the Wi-Fi network, the system starts normal operation.
 5.  The RTC reads the current date and time and displays it on the LCD.
 6.  The DHT11 sensor measures the temperature and humidity.
 7.  The image representing it shows on the LCD
-8.  <img src="images/Gallery_1785997738144.jpg" width="90%">
+8.  <img src="images/Gallery_1785997738144.jpg" width="70%">
 9.  The soil moisture sensor measures the moisture level of the soil.
 10.   The LPC2148 displays the sensor values and time on the LCD.
 11.   If the soil moisture value is below the preset threshold, the LPC2148 turns ON the relay, which starts the 12 V           water    motor.
