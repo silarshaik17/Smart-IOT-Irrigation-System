@@ -49,7 +49,7 @@ void InitUART0(void)
 	PINSEL0 = 0x00000005;   // Enable RxD0 and TxD0 pin functions
 
 	U0LCR = 0x83;   // DLAB = 1, 8 bits, no parity, 1 stop bit (to access divisor latch)
-	U0DLL = 97;     // Divisor for 9600 baud @ CCLK/4 peripheral clock
+	U0DLL = Divisor;     // Divisor for 9600 baud @ CCLK/4 peripheral clock //97
 	U0LCR = 0x03;   // DLAB = 0, back to normal register access (8N1)
 
 #if UART_INT_ENABLE > 0
